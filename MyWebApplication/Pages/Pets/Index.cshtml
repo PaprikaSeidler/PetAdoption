@@ -1,0 +1,53 @@
+﻿@page
+@model MyWebApplication.Pages.Pets.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>List of pets avalible for adoption </h1>
+<p>
+    <a asp-page="AddPets">Add New Pet</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                Species
+            </th>
+            <th>
+                Image
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Pets)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Age
+                </td>
+                <td>
+                    @item.Species
+                </td>
+                <td>
+                    <img src="~/NewFolder2/@item.ImageName" width="80" height="80" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

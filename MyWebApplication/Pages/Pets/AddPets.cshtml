@@ -1,0 +1,36 @@
+﻿@page
+@model MyWebApplication.Pages.Pets.AddPetsModel
+@{
+    ViewData["Title"] = "AddPet";
+}
+<h1>AddPet</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="@Model.Pet.Name" class="control-label"></label>
+                <input asp-for="@Model.Pet.Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Pet.Age" class="control-label"></label>
+                <input asp-for="@Model.Pet.Age" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Pet.Species" class="control-label"></label>
+                <input asp-for="@Model.Pet.Species" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Pet.ImageName" class="control-label"></label>
+                <input asp-for="@Model.Pet.ImageName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index">Back to list</a>
+</div>
+    
